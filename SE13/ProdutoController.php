@@ -93,7 +93,10 @@ class ProdutoController {
             ]);
         } else { 
             $stmt = $pdo->prepare("UPDATE produtos SET 
-                                    nome = :nome, preco = :preco, quantidade = :quantidade, descricao = :descricao, marca = :marca, url_imagem = :url_imagem 
+                                    nome = :nome, preco = :preco, 
+                                    quantidade = :quantidade, 
+                                    descricao = :descricao, 
+                                    marca = :marca, url_imagem = :url_imagem 
                                     WHERE id = :id");
             $stmt->execute([
                 ':nome' => $_POST['nome'],
@@ -102,6 +105,7 @@ class ProdutoController {
                 ':descricao' => $_POST['descricao'],
                 ':marca' => $_POST['marca'],
                 ':url_imagem' => $_POST['url_imagem'],
+                ':id' => $_POST['id']
             ]);            
         }
         header("Location: ?acao=index");
