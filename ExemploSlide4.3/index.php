@@ -1,0 +1,1 @@
+<?php header("Location: AutController.php?acao=loginForm"); ?>
