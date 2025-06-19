@@ -5,7 +5,6 @@
             </div>
             <div class="card-body">
                 <form method="post" action="AutController.php?acao=login">
-                    <input type="hidden" name="id" value="<?= $produto->id ?>" >
                     <label class="form-label">Usuário:</label>
                     <input class="form-control" type="text" 
                                                 name="usuario"
@@ -19,4 +18,4 @@
             </div>
         </div>
 
-        
+          
